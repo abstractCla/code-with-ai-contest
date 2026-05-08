@@ -10,6 +10,16 @@ def load_data():
     df = pd.read_csv('data/signal_samples.csv')
     return df
 
+def get_signal_color(rsrp):
+    if rsrp > -90:
+        return '#228B22'
+    elif rsrp > -100:
+        return '#FFD700'
+    elif rsrp > -110:
+        return '#FF8C00'
+    else:
+        return '#DC143C'
+
 df = load_data()
 
 st.title("📡 5G 信号可视化看板")
@@ -49,6 +59,8 @@ if selected_band != '全部':
 if selected_terminal != '全部':
     filtered_df = filtered_df[filtered_df['TerminalType'] == selected_terminal]
 
+filtered_df['color'] = filtered_df['RSRP_dBm'].apply(get_signal_color)
+
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -67,7 +79,7 @@ with col4:
     st.metric("平均下载速率", f"{avg_speed:.2f} Mbps")
 
 st.subheader("📍 信号分布地图 (2D)")
-st.map(filtered_df, latitude='Latitude', longitude='Longitude', color='RSRP_dBm',
+st.map(filtered_df, latitude='Latitude', longitude='Longitude', color='color',
        size=50, zoom=12)
 
 st.subheader("🗺️ 信号分布地图 (3D)")
