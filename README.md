@@ -47,6 +47,8 @@ streamlit run app.py
 ├── requirements.txt         # 依赖包列表
 ├── README.md               # 项目说明文档
 ├── AI_PROMPTS.md           # AI 交互日志
+├── screenshots/            # 运行截图（需手动添加）
+│   └── README.md           # 截图添加说明
 └── data/
     └── signal_samples.csv   # 5G 信号数据样本
 ```
@@ -90,6 +92,17 @@ streamlit run app.py
 - 中部展示数据统计图表
 - 底部显示原始数据预览表格
 
+## 运行截图
+
+> ⚠️ **注意**：由于自动化环境限制，运行截图需手动添加。请在应用运行后截图保存至 `screenshots/` 目录。
+
+推荐截图内容：
+1. **地图与侧边栏截图**：展示 2D/3D 地图和侧边栏筛选器
+2. **数据统计图表截图**：展示频段分布和终端类型占比柱状图
+3. **交互效果截图**：展示筛选器联动更新的效果
+
+截图保存路径：`screenshots/screenshot_01.png`（示例）
+
 ## 技术栈
 
 - **Web 框架**：Streamlit
@@ -113,8 +126,19 @@ streamlit run app.py
 本项目是为 **"Code with AI" 海选赛：5G 信号可视化看板挑战** 开发的作品。
 
 ### 验收标准
-- 基础关卡：完成数据加载、地图显示、图表统计
-- 进阶关卡：完成侧边栏筛选、3D 地图、工程化代码
+
+#### 基础关卡（必做，完赛基准线）
+- ✅ **数据加载**：使用 pandas 库读取 CSV 数据
+- ✅ **信号散点地图**：2D 地图显示信号分布，地图点根据 RSRP_dBm 变色
+  - RSRP > -90 dBm 为绿色
+  - RSRP < -110 dBm 为红色
+- ✅ **数据概览图表**：柱状图统计各频段基站数量和终端类型占比
+
+#### 进阶关卡（加分项）
+- ✅ **侧边栏联动筛选**：下拉菜单筛选频段、滑动条筛选 RSRP 范围
+- ✅ **实时更新**：筛选器拖动时地图和图表实时更新
+- ✅ **3D 地图**：pydeck HexagonLayer，六边形"站起来"高度随下载速率变化
+- ✅ **工程化素养**：代码规范注释
 
 ### 提交方式
 ```bash
@@ -126,6 +150,12 @@ git push origin basic-done
 git tag advanced-done
 git push origin advanced-done
 ```
+
+### 硬核交付物清单
+1. ✅ **源代码**：app.py + requirements.txt
+2. ✅ **项目说明文档**：README.md
+3. ⚠️ **运行截图**：screenshots/ 目录（需手动添加）
+4. ✅ **Agent 交互日志**：AI_PROMPTS.md
 
 ## 许可证
 
