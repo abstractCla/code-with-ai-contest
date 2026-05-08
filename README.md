@@ -99,31 +99,31 @@ streamlit run app.py
 
 展示了应用的主界面，包含标题、欢迎信息、关键指标卡片（总数据点、平均RSRP、平均SINR、平均下载速率）、2D信号分布地图（根据RSRP着色）和左侧侧边栏筛选器。
 
-![主页面与2D地图](https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=5G%20signal%20visualization%20dashboard%20web%20application%20interface%2C%20showing%20main%20dashboard%20with%20title%20%225G%20信号可视化看板%22%2C%20key%20metric%20cards%20displaying%20data%20points%20count%2C%20average%20RSRP%2C%20average%20SINR%2C%20average%20download%20speed%2C%202D%20scatter%20map%20showing%20signal%20distribution%20with%20colored%20markers%20green%20to%20red%2C%20left%20sidebar%20with%20filter%20options%20for%20frequency%20band%20and%20terminal%20type%2C%20modern%20dark%20theme%20web%20UI%2C%20clean%20professional%20design&image_size=landscape_16_9)
+![主页面与2D地图](screenshots/main_dashboard.png)
 
 ### 2. 3D地图与统计图表
 
 展示了3D HexagonLayer 可视化效果（高度随下载速率变化）、频段分布柱状图和终端类型占比柱状图。
 
-![3D地图与统计图表](https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=5G%20signal%20visualization%20dashboard%20showing%203D%20hexagon%20heatmap%20visualization%20using%20pydeck%20HexagonLayer%2C%20hexagons%20standing%20up%20with%20varying%20heights%20representing%20download%20speed%2C%20color%20gradient%20from%20green%20to%20red%20indicating%20signal%20strength%2C%20frequency%20band%20distribution%20bar%20chart%2C%20terminal%20type%20proportion%20bar%20chart%2C%20modern%20dark%20theme%20data%20visualization%20interface&image_size=landscape_16_9)
+![3D地图与统计图表](screenshots/3d_map_charts.png)
 
 ### 3. RSRP-SINR关系分析
 
 展示了RSRP与SINR关系散点图和原始数据预览表格（前20行）。
 
-![RSRP-SINR关系分析](https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=5G%20signal%20visualization%20dashboard%20showing%20RSRP%20and%20SINR%20relationship%20scatter%20plot%20analysis%20chart%2C%20X-axis%20RSRP%20dBm%20values%2C%20Y-axis%20SINR%20dB%20values%2C%20data%20points%20showing%20signal%20quality%20correlation%2C%20raw%20data%20preview%20table%20below%20showing%20first%2020%20rows%20of%20signal%20data%20with%20columns%20Latitude%20Longitude%20CellID%20Band%20RSRP%20SINR%2C%20modern%20dark%20theme%20analytics%20interface&image_size=landscape_16_9)
+![RSRP-SINR关系分析](screenshots/rsrp_sinr_scatter.png)
 
 ### 4. 频段筛选器
 
 展示了频段筛选下拉菜单，选项包括全部、n28、n41、n78。
 
-![频段筛选器](https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=5G%20signal%20visualization%20dashboard%20sidebar%20showing%20frequency%20band%20filter%20dropdown%20menu%2C%20options%20including%20All%20Bands%2C%20n28%2C%20n41%2C%20n78%2C%20clean%20modern%20UI%20design%2C%20dark%20theme%20sidebar%20with%20label%20%22选择频段%20(Band)%22%2C%20dropdown%20showing%20n28%20selected%20with%20checkmark%2C%20professional%20web%20application%20interface&image_size=portrait_4_3)
+![频段筛选器](screenshots/band_filter.png)
 
 ### 5. 终端类型筛选器
 
 展示了终端类型筛选下拉菜单，选项包括全部、CPE、IoT、Smartphone。
 
-![终端类型筛选器](https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=5G%20signal%20visualization%20dashboard%20sidebar%20showing%20terminal%20type%20filter%20dropdown%20menu%2C%20options%20including%20All%20Types%2C%20CPE%2C%20IoT%2C%20Smartphone%2C%20clean%20modern%20UI%20design%2C%20dark%20theme%20sidebar%20with%20label%20%22选择终端类型%22%2C%20dropdown%20showing%20Smartphone%20selected%20with%20checkmark%2C%20professional%20web%20application%20interface&image_size=portrait_4_3)
+![终端类型筛选器](screenshots/terminal_filter.png)
 
 ### 截图存放位置
 
